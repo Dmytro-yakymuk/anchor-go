@@ -418,7 +418,7 @@ func genTypeDef(idl *IDL, withDiscriminator bool, def IdlTypeDef) Code {
 
 		// panic(Sf("not implemented: %s", spew.Sdump(def)))
 	default:
-		panic(Sf("not implemented: %s", spew.Sdump(def.Type.Kind)))
+		// panic(Sf("not implemented: %s", spew.Sdump(def.Type.Kind)))
 	}
 	return st
 }
