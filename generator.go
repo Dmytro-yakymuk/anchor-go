@@ -1,6 +1,9 @@
 package main
 
 import (
+	"encoding/json"
+	"fmt"
+
 	. "github.com/dave/jennifer/jen"
 	"github.com/davecgh/go-spew/spew"
 	bin "github.com/gagliardetto/binary"
@@ -418,7 +421,11 @@ func genTypeDef(idl *IDL, withDiscriminator bool, def IdlTypeDef) Code {
 
 		// panic(Sf("not implemented: %s", spew.Sdump(def)))
 	default:
-		// panic(Sf("not implemented: %s", spew.Sdump(def.Type.Kind)))
+
+		s2, _ := json.MarshalIndent(def, "", "\t")
+		fmt.Println("def - ", string(s2))
+
+		panic(Sf("not implemented: %s", spew.Sdump(def.Type.Kind)))
 	}
 	return st
 }

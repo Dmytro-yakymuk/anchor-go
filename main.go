@@ -277,6 +277,10 @@ func GenerateClientFromProgramIDL(idl IDL) ([]*FileWrapper, error) {
 		file := NewGoFile(idl.Name, true)
 		// Declare types from IDL:
 		for _, typ := range idl.Types {
+
+			s2, _ := json.MarshalIndent(idl, "", "\t")
+			fmt.Println("idl - ", string(s2))
+
 			file.Add(genTypeDef(&idl, false, typ))
 		}
 		files = append(files, &FileWrapper{
