@@ -227,7 +227,7 @@ const (
 	IdlTypeI128      IdlTypeAsString = "i128"
 	IdlTypeBytes     IdlTypeAsString = "bytes"
 	IdlTypeString    IdlTypeAsString = "string"
-	IdlTypePublicKey IdlTypeAsString = "pubkey" // changed.
+	IdlTypePublicKey IdlTypeAsString = "publicKey" // change.
 
 	// Custom additions:
 	IdlTypeUnixTimestamp IdlTypeAsString = "unixTimestamp"
